@@ -11,16 +11,17 @@
 }
 
 .card-product {
-  margin: 6px;
+  margin: 24px;
   padding: 16px;
   background-color: lightgray;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex: 1;
   color: white;
   box-sizing:border-box;
   height: 60vh;
+  box-shadow: 10px 5px 5px lightgray;
+  border-radius: 5px;
 }
 
 .card-product img {
@@ -59,9 +60,9 @@
 
 }
 
-// .flex-row {
-//   display: flex;
-//   flex: 1;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-// }
+.flat-card-actions {
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 16px 24px;
+}
