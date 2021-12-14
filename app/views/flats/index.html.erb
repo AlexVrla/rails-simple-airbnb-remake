@@ -1,0 +1,16 @@
+<h1>All our Flats(<%= @flats.size %>)</h1>
+<ul>
+  <div class='flat-card'>
+    <% @flats.each do |flat| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <li><h2><%= flat.name %></h2></li>
+          <li><p><%= flat.description %></p></li>
+          <li>sleeps<%= flat.number_of_guests %></li>
+          <li><%= flat.price_per_night %>$/night</li>
+        </div>
+    </div>
+  <% end %>
+  </div>
+</ul>
