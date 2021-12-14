@@ -1,27 +1,29 @@
 <h1>All our Flats(<%= @flats.size %>)</h1>
-<ul>
-  <div class='flat-card'>
+
+<div class="flats">
+  <ul>
     <% @flats.each do |flat| %>
       <div class="card-product">
-        <div class= right-side>
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <li><h2><%= flat.name %></h2></li>
-            <li><p><%= flat.description %></p></li>
-            <li>sleeps <%= flat.number_of_guests %></li>
-            <li><%= flat.price_per_night %>$/night</li>
-              <div class="flat-card-actions">
-                <%= link_to 'More info', flat_path(flat) %>
-                <%= link_to 'Edit', edit_flat_path(flat), class: 'ms-3 text-warning' %>
-                <%= link_to "Remove", flat_path(flat),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" },
-                    class: 'ms-3 text-danger'
-                %>
-              </div>
+        <div class="picture">
+          <%= image_tag flat.picture_url %>
+        </div>
+        <div class="card-product-infos">
+          <li><h2><%= flat.name %></h2></li>
+          <li><p><%= flat.description %></p></li>
+          <li>sleeps <%= flat.number_of_guests %></li>
+          <li><%= flat.price_per_night %>$/night</li>
+            <div class="flat-card-actions">
+              <%= link_to 'More info', flat_path(flat) %>
+              <%= link_to 'Edit', edit_flat_path(flat), class: 'ms-3 text-warning' %>
+              <%= link_to "Remove", flat_path(flat),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" },
+                  class: 'ms-3 text-danger'
+              %>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-  </div>
-</ul>
+  </ul>
+</div>
