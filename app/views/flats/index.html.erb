@@ -1,12 +1,9 @@
 <h1>All our Flats(<%= @flats.size %>)</h1>
 
-<div class="flats">
   <ul>
     <% @flats.each do |flat| %>
       <div class="card-product">
-        <div class="picture">
-          <%= image_tag flat.picture_url %>
-        </div>
+        <%= image_tag flat.picture_url %>
         <div class="card-product-infos">
           <li><h2><%= flat.name %></h2></li>
           <li><p><%= flat.description %></p></li>
@@ -18,12 +15,10 @@
               <%= link_to "Remove", flat_path(flat),
                   method: :delete,
                   data: { confirm: "Are you sure?" },
-                  class: 'ms-3 text-danger'
-              %>
+                  class: 'ms-3 text-danger'%>
             </div>
           </div>
         </div>
       </div>
     <% end %>
   </ul>
-</div>
